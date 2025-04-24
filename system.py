@@ -5,21 +5,30 @@ while True:
 
     #tabuada
     if service == 1:
+        while True:
 
-        print (line, 'TABUADA', line)
-        num_tabuada = int(input('Deseja ver a tabuada de qual número?\n'))
-        print('\n')
-        print (line, 'SEGUE O RESULTADO ABAIXO', line)
-        i = 0
+            print (line, 'TABUADA', line)
+            num_tabuada = int(input('Deseja ver a tabuada de qual número?\n'))
+            print('\n')
+            print (line, 'SEGUE O RESULTADO ABAIXO', line)
+            i = 0
 
-        
 
-        
-        while i < 10:
-            i += 1
-            result = num_tabuada * i
-            print (f'{num_tabuada} X {i} = {result}')
-      
+
+
+            while i < 10:
+                i += 1
+                result = num_tabuada * i
+                print (f'{num_tabuada} X {i} = {result}')
+            print('\n')
+            escolha1 = int(input('1- Reiniciar Tabuada\n2- Voltar ao Menu Inicial \n'))
+            
+            print('\n')
+
+            if escolha1 == 2:
+                 break
+                 
+            
 
             
     #conversor de temperatura
