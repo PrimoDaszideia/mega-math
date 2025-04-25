@@ -32,9 +32,52 @@ while True:
             
     #conversor de temperatura
     if service == 2:
-          
-          print (line, 'CONVERSOR DE TEMPERATURA', line)
+      while True:
+            print (line, 'CONVERSOR DE TEMPERATURA', line)
+            temp_tipe = float(input('Digite qual tipo de temperatura deseja fazer a conversão (Digite um número referente a opção desejada):\n1- Kelvin => Celsius\n2- Kelvin => Fahrenheit\n3- Celsius => Kelvin\n4- Celsius => Fahrenheit\n5- Fahrenheit => Celsius\n6- Fahrenheit => Kelvin \n'))
+            print('\n')
 
+            #kelvin para celsius
+            if temp_tipe == 1:
+                 k = float(input('Digite a temperatura em Kelvin que deseja fazer a conversão para Celsius: '))
+                 c = k - 273
+                 print(f'{k}K na escala de graus Celsius é igual {c}°C')
+
+            #kelvin para fahrenheit
+            if temp_tipe == 2:
+                 k = float(input('Digite a temperatura em Kelvin que deseja fazer a conversão para Fahrenheit: '))
+                 f = ((k - 273) * 1.8 + 32)
+                 print(f'{k}K na escala de graus Fahrenheit é igual {f}°F')
+
+          #celsius para kelvin
+            if temp_tipe == 3:    
+                 c = float(input('Digite a temperatura em Celsius que deseja fazer a conversão para Kelvin: '))
+                 k = c + 273
+                 print(f'{c}°C na escala de graus Kelvin é igual {k}K')
+     
+            #celsius para fahrenheit
+            if temp_tipe == 4:    
+                 c = float(input('Digite a temperatura em Celsius que deseja fazer a conversão para Fahrenheit: '))
+                 f = ((c * 1.8) + 32)
+                 print(f'{c}°C na escala de graus Fahrenheit é igual {f}°F')
+      
+            #Fahrenheit para celsius
+            if temp_tipe == 5:   
+                 f = float(input('Digite a temperatura em Fahrenheit que deseja fazer a conversão para Celsius: '))
+                 c = ((f - 32) / 1.8)
+                 print(f'{f}°F na escala de graus Fahrenheit é igual {c}°C')
+       
+            #Fahrenheit para kelvin
+            if temp_tipe == 6:
+                 f = float(input('Digite a temperatura em Fahrenheit que deseja fazer a conversão para Kelvin: '))
+                 k = ((f - 32) * 5/9 + 273)
+                 print(f'{f}°F na escala de graus Fahrenheit é igual {k}K')
+            
+            escolha = int(input('1- Reiniciar áreas converso de temperatura\n2- Voltar ao Menu Inicial \n'))
+
+            if escolha == 2:
+                  break 
+ 
 
     #areas de figuras geometricas
     if service == 3:
@@ -68,7 +111,7 @@ while True:
                   print ('O valor da área desse trapezio é: ',calc_trap)
 
             #retangulo
-            if figure == 4:
+            elif figure == 4:
                  base_ret = float(input('Digite o valor da base do retangulo: '))
                  alt_ret = float(input('Digite o valor da altura do retangulo: '))
                  calc_ret = base_ret * alt_ret
@@ -77,12 +120,13 @@ while True:
            
 
             #circulo
-            if figure == 5:
+            elif figure == 5:
                  raio = float(input('Digite o valor do raio do circulo: '))
                  pi = 3.14
                  calc_circle = (pi * (raio**2))
                  print ('O valor da área desse cirulo é: ',calc_circle)
             escolha2 = int(input('1- Reiniciar áreas de figuras geometricas\n2- Voltar ao Menu Inicial \n'))
+
             if escolha2 == 2:
                   break 
             
