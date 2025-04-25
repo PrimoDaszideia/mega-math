@@ -1,7 +1,9 @@
 line = "================="
 
 while True:
+    print (line, 'SEJA BEM-VINDO AO MEGA-MATH', line)
     service = int(input('Qual tipo dos nossos serviços deseja usar (Digite o numero referente o serviço): \n1- Tabuada\n2- Conversor de Temperatura\n3- Área de Figuras Geometricas\n4- Juros Simples\n5- Juros Compostos\n6- Calculadora Basica\n0- Sair do Programa\n'))
+    print ('\n')
 
     #tabuada
     if service == 1:
@@ -12,9 +14,6 @@ while True:
             print('\n')
             print (line, 'SEGUE O RESULTADO ABAIXO', line)
             i = 0
-
-
-
 
             while i < 10:
                 i += 1
@@ -33,12 +32,60 @@ while True:
             
     #conversor de temperatura
     if service == 2:
+          
           print (line, 'CONVERSOR DE TEMPERATURA', line)
 
 
-    #areas de figuras geoetricas
+    #areas de figuras geometricas
     if service == 3:
-          print (line, 'ÁREAS DE FIGURAS GEOMÉTRICAS', line)
+      while True:      
+            print (line, 'ÁREAS DE FIGURAS GEOMÉTRICAS', line)
+            figure = int(input('De qual figura geométrica pretende descobrir a área (Digite um número referente a opção desejada):\n1- Quadrado\n2- Triangulo\n3- Trapezio\n4- Retangulo\n5- Circulo\n'))
+            print ('\n')
+
+            #quadrado
+            if figure == 1:
+            
+                  Q1 = float(input('Digite o valor de um dos lados do quadrado: '))
+                  calc_square = Q1 ** 2
+                  print ('O valor da área desse quadrado é: ',calc_square)
+
+            #triangulo
+            elif figure == 2:
+                 
+                  base_tri = float(input('Digite o valor da base do triangulo: '))
+                  alt_tri = float(input('Digite o valor da altura do triangulo: '))
+                  calc_tri = base_tri * alt_tri / 2
+                  print ('O valor da área desse triângulo é: ',calc_tri)
+
+            #trapezio
+            elif figure == 3:
+                  
+                  base1 = float(input('Digite o valor da base maior do trapezio: '))
+                  base2 = float(input('Digite o valor da base menor do trapezio: '))
+                  alt_trap = float(input('Digite o valor da altura do trapezio: '))
+                  calc_trap = ((base1 + base2) * alt_trap) / 2
+                  print ('O valor da área desse trapezio é: ',calc_trap)
+
+            #retangulo
+            if figure == 4:
+                 base_ret = float(input('Digite o valor da base do retangulo: '))
+                 alt_ret = float(input('Digite o valor da altura do retangulo: '))
+                 calc_ret = base_ret * alt_ret
+                 print ('O valor da área desse triângulo é: ',calc_ret)
+
+           
+
+            #circulo
+            if figure == 5:
+                 raio = float(input('Digite o valor do raio do circulo: '))
+                 pi = 3.14
+                 calc_circle = (pi * (raio**2))
+                 print ('O valor da área desse cirulo é: ',calc_circle)
+            escolha2 = int(input('1- Reiniciar áreas de figuras geometricas\n2- Voltar ao Menu Inicial \n'))
+            if escolha2 == 2:
+                  break 
+            
 
     #juros simples
     if service == 4:
@@ -56,5 +103,3 @@ while True:
         print('Saindo do programa. Até logo!')
         break
 
-    else:
-        print('Função ainda não implementada ou opção inválida. Tente novamente.')
