@@ -125,11 +125,10 @@ while True:
                  pi = 3.14
                  calc_circle = (pi * (raio**2))
                  print ('O valor da área desse cirulo é: ',calc_circle)
-            escolha2 = int(input('1- Reiniciar áreas de figuras geometricas\n2- Voltar ao Menu Inicial \n'))
+            escolha = int(input('1- Reiniciar áreas de figuras geometricas\n2- Voltar ao Menu Inicial \n'))
 
-            if escolha2 == 2:
-                  break 
-            
+            if escolha == 2:
+                  break
 
     #juros simples
     if service == 4:
@@ -140,9 +139,34 @@ while True:
           print (line, 'JUROS COMPOSTOS', line)
 
     #calculadora basica
-    if service == 2:
-          print (line, 'CALCULADORA BÁSICA', line)
+    if service == 6:
+      while True:
+            print (line, 'CALCULADORA BÁSICA', line)
+            num1 = float(input('Digite o primeiro número para realizar a operação: '))
+            operation = int(input('Qual tipo de operação deseja realizar (Digite um número referente a opção desejada):\n1- Adição\n2- Subtração\n3- Divisão\n4- Multiplicação\n5- Potenciação\nEscolha: '))
+            num2 = float(input('Digite o segundo número para realizar o cálculo da operação: '))
 
+            #adiçao
+            if operation == 1:
+                 print('O valor da operação é: ',num1 + num2)
+            #subtraçao
+            if operation == 2:
+                  print('O valor da operação é: ',num1 - num2)
+            #divisao
+            if operation == 3:
+                 print('O valor da operação é: ',num1 / num2)
+            #multiplicacao
+            if operation == 4:
+                 print('O valor da operação é: ',num1 * num2)
+            #potenciacao
+            if operation == 5:
+                 print('O valor da operação é: ',num1 ** num2)
+            
+            escolha = int(input('1- Reiniciar áreas de figuras geometricas\n2- Voltar ao Menu Inicial \n'))
+
+            if escolha == 2:
+                  break
+      
     if service == 0:
         print('Saindo do programa. Até logo!')
         break
