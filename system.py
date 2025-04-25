@@ -132,7 +132,22 @@ while True:
 
     #juros simples
     if service == 4:
-          print (line, 'JUROS SIMPLES', line)
+      while True:
+            print (line, 'JUROS SIMPLES', line)
+            c = float(input('Digite o valor de capital (Utilize ponto "." para números com vírgula): '))
+            i = float(input('Digite o valor da taxa de juros (Utilize ponto "." para números com vírgula): '))
+            t = int(input('Digite o tempo em meses: '))
+            j = (c * i * t) / 100
+            m = c + j
+      
+            print(f'O valor do juros é R${j}. Sendo assim, o valor montante fica R${m}')
+            escolha = int(input('1- Reiniciar áreas de figuras geometricas\n2- Voltar ao Menu Inicial \n'))
+
+            if escolha == 2:
+                  break
+
+
+
 
     #juros compostos
     if service == 5:
